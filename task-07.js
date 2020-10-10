@@ -1,14 +1,16 @@
 function filterArray(array) {
   'use strict';
   const numbers = [];
+  
   for(let i = 0; i < array.length; i += 1) {
-    // Write code under this line
-   
-    numbers[i] = Number(array[i]) 
-    
+    if(Number.isFinite(array[i]) === true){
+      numbers.push(array[i]);
+    }
   }
+
   return numbers;
 }
+
 
 console.log(filterArray([-2, 0, 2]));
 // [-2, 0, 2]
